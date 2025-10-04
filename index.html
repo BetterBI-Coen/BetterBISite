@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BetterBI-like Starter</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Ga naar de inhoud</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">BBI</span>
+        <span class="sr-only">BetterBI-like</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#diensten">Diensten</a></li>
+          <li><a href="#trainingen">Trainingen</a></li>
+          <li><a href="#over">Over</a></li>
+          <li class="nav-cta"><a href="#contact" class="button button--primary">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-mobile">
+        <ul>
+          <li><a href="#diensten">Diensten</a></li>
+          <li><a href="#trainingen">Trainingen</a></li>
+          <li><a href="#over">Over</a></li>
+          <li><a href="#contact" class="button button--primary w-full">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="eyebrow">Wil je</h1>
+          <h2 class="display">versnellen<span class="accent">.</span></h2>
+          <p class="lead">
+            Bouw een datagedreven organisatie met heldere dashboards, betrouwbare datasets en een team dat weet wat telt.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="button button--primary">Plan een gesprek</a>
+            <a href="#diensten" class="button button--ghost">Onze diensten</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <!-- Replace with your image/video -->
+          <div class="media-placeholder" aria-label="Hero media"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature highlights (3-up) -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>In-house BI</h3>
+            <p>Wij versterken je team met BI-expertise en helpen processen duurzaam te borgen.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>Ruimte om te groeien</h3>
+            <p>Van quick wins naar schaalbare data-architectuur met duidelijke governance.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>Mentorschap</h3>
+            <p>Coaching en best practices zodat jouw team zelfstandig verder kan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="diensten" class="services">
+      <div class="container">
+        <header class="section-head">
+          <h2>Verbeter je business met onze diensten</h2>
+          <p>Pragmatische BI-oplossingen die aansluiten op je doelstellingen.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Rapportages</h3>
+            <p>Heldere dashboards die besluiten versnellen en teams alignen.</p>
+            <a class="card-link" href="#">Meer lezen</a>
+          </article>
+
+          <article class="card">
+            <h3>Koppelingen</h3>
+            <p>Betrouwbare datastromen met robuuste integraties en monitoring.</p>
+            <a class="card-link" href="#">Meer lezen</a>
+          </article>
+
+          <article id="trainingen" class="card">
+            <h3>Trainingen</h3>
+            <p>Hands-on sessies over data-modellering, visualisatie en governance.</p>
+            <a class="card-link" href="#">Meer lezen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client logos strip -->
+    <section class="clients" aria-label="Klanten">
+      <div class="container">
+        <ul class="logo-strip">
+          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 1"></div></li>
+          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 2"></div></li>
+          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 3"></div></li>
+          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 4"></div></li>
+          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 5"></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Numbered benefits -->
+    <section class="benefits">
+      <div class="container">
+        <div class="benefits-grid">
+          <article class="benefit">
+            <span class="num">1</span>
+            <h3>Customer Experience</h3>
+            <p>Maak klantinzichten centraal en verkort de time-to-value.</p>
+          </article>
+          <article class="benefit">
+            <span class="num">2</span>
+            <h3>Kostenbesparing</h3>
+            <p>Automatiseer rapportage en minimaliseer verspilling in dataflows.</p>
+          </article>
+          <article class="benefit">
+            <span class="num">3</span>
+            <h3>Data-analyse</h3>
+            <p>Combineer bronnen en ga van descriptief naar voorspellend.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="over" class="about">
+      <div class="container about-inner">
+        <div class="about-copy">
+          <h2>Over ons</h2>
+          <p>We helpen organisaties om datagedreven te werken met focus op resultaat, eenvoud en overdraagbaarheid.</p>
+          <a class="button button--ghost" href="#contact">Neem contact op</a>
+        </div>
+        <div class="about-media">
+          <div class="media-placeholder" aria-label="Over ons media"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer CTA -->
+    <section id="contact" class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h3>Samen aan de slag?</h3>
+          <p>Vertel ons je doel — wij maken een plan.</p>
+        </div>
+        <a href="mailto:info@jouwdomein.nl" class="button button--primary">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BetterBI-like</strong>
+        <p>Verbeter je bedrijfsvoering met BI.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Voorwaarden</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Jouw Bedrijf. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Optional: update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
