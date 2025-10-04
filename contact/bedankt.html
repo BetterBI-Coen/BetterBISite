@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bedankt — BetterBI-like</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ga naar de inhoud</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">BBI</span><span class="sr-only">BetterBI-like</span></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="/#diensten">Diensten</a></li>
+          <li><a href="/trainingen/">Trainingen</a></li>
+          <li><a href="/#over">Over</a></li>
+          <li class="nav-cta"><a href="/contact/" class="button button--primary">Contact</a></li>
+        </ul>
+      </nav>
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu"><label class="hamburger" for="menu-toggle"><span></span><span></span><span></span></label>
+      <nav class="nav-mobile"><ul><li><a href="/#diensten">Diensten</a></li><li><a href="/trainingen/">Trainingen</a></li><li><a href="/#over">Over</a></li><li><a href="/contact/" class="button button--primary w-full">Contact</a></li></ul></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="services">
+      <div class="container">
+        <header class="section-head">
+          <h1>Bedankt!</h1>
+          <p id="msg"></p>
+        </header>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><strong>BetterBI-like</strong><p>Verbeter je bedrijfsvoering met BI.</p></div>
+      <nav class="footer-nav"><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/voorwaarden/">Voorwaarden</a></li></ul></nav>
+      <div class="footer-meta"><p>© <span id="year"></span> Jouw Bedrijf. Alle rechten voorbehouden.</p></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const params = new URLSearchParams(location.search);
+    const ok = params.get('status') === 'ok';
+    document.getElementById('msg').textContent = ok
+      ? 'Je bericht is verzonden. We nemen snel contact met je op.'
+      : 'Er ging iets mis bij het versturen. Probeer het opnieuw of mail ons rechtstreeks.';
+  </script>
+</body>
+</html>

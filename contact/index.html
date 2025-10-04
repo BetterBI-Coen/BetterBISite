@@ -9,29 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/styles.css" />
   <style>
-    /* Extra style just for the iframe */
-    .iframe-wrapper {
-      width: 100%;
-      height: calc(100vh - 180px); /* full viewport minus header/footer */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+    /* Light form styling that matches your theme */
+    .form { max-width: 720px; margin: 0 auto; }
+    .field { display: grid; gap: 6px; margin-bottom: 14px; }
+    .field label { font-weight: 600; }
+    .field input, .field textarea {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
     }
-    .iframe-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    .help { color: var(--muted); font-size: .9rem; }
+    .error { color: #ffb4b4; font-size: .95rem; display: none; }
+    .card-like {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 22px; box-shadow: var(--shadow);
     }
   </style>
 </head>
 <body>
-  <!-- Skip link -->
   <a class="skip-link" href="#main">Ga naar de inhoud</a>
 
-  <!-- Header -->
+  <!-- Header (same as other pages) -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
@@ -41,7 +38,7 @@
       <nav class="nav">
         <ul>
           <li><a href="/#diensten">Diensten</a></li>
-          <li><a href="trainingen/">Trainingen</a></li>
+          <li><a href="/trainingen/">Trainingen</a></li>
           <li><a href="/#over">Over</a></li>
           <li class="nav-cta"><a href="/contact/" class="button button--primary">Contact</a></li>
         </ul>
@@ -53,7 +50,7 @@
       <nav class="nav-mobile">
         <ul>
           <li><a href="/#diensten">Diensten</a></li>
-          <li><a href="trainingen/">Trainingen</a></li>
+          <li><a href="/trainingen/">Trainingen</a></li>
           <li><a href="/#over">Over</a></li>
           <li><a href="/contact/" class="button button--primary w-full">Contact</a></li>
         </ul>
@@ -62,9 +59,48 @@
   </header>
 
   <main id="main">
-    <!-- IFrame container -->
-    <section class="iframe-wrapper">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF6jmV_UMmQeYZUBK9cJVbxdQStHdcjyh8QRBRYdspiiGKkw/viewform?embedded=true" width="640" height="852" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <section class="services">
+      <div class="container">
+        <header class="section-head">
+          <h1>Contact</h1>
+          <p>Laat je gegevens achter en we nemen snel contact op.</p>
+        </header>
+
+        <form class="form card-like" action="/contact/send.php" method="POST">
+          <!-- Honeypot (spam-trap) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="field">
+            <label for="naam">Naam</label>
+            <input id="naam" name="naam" required autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <label for="telefoon">Telefoon (optioneel)</label>
+            <input id="telefoon" name="telefoon" type="tel" autocomplete="tel" />
+          </div>
+
+          <div class="field">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="bericht" rows="6" required></textarea>
+          </div>
+
+          <div class="field" style="align-items:start">
+            <label style="display:flex; gap:10px; align-items:center;">
+              <input type="checkbox" name="toestemming" required>
+              <span>Ik geef toestemming om mijn gegevens te gebruiken om contact met mij op te nemen.</span>
+            </label>
+            <p class="help">We bewaren je gegevens alleen voor contact over je aanvraag.</p>
+          </div>
+
+          <button class="button button--primary" type="submit">Versturen</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -77,8 +113,8 @@
       </div>
       <nav class="footer-nav">
         <ul>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Voorwaarden</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/voorwaarden/">Voorwaarden</a></li>
         </ul>
       </nav>
       <div class="footer-meta">
