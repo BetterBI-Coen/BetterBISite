@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trainingen — BetterBI-like</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Ga naar de inhoud</a>
+
+  <!-- Header / Nav (zelfde als op index) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">BBI</span>
+        <span class="sr-only">BetterBI-like</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="trainingen.html">Trainingen</a></li>
+          <li><a href="index.html#over">Over</a></li>
+          <li class="nav-cta"><a href="index.html#contact" class="button button--primary">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-mobile">
+        <ul>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="trainingen.html">Trainingen</a></li>
+          <li><a href="index.html#over">Over</a></li>
+          <li><a href="index.html#contact" class="button button--primary w-full">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="eyebrow">Trainingen</h1>
+          <h2 class="display">Maak je team <span class="accent">datagedreven</span></h2>
+          <p class="lead">
+            Praktische, hands-on trainingen voor Power BI, datamodellering, dbt en dashboard design.
+            Altijd gericht op directe toepasbaarheid in jouw organisatie.
+          </p>
+          <div class="hero-actions">
+            <a href="#aanbod" class="button button--primary">Bekijk het aanbod</a>
+            <a href="#maatwerk" class="button button--ghost">Maatwerk & In-company</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="media-placeholder" aria-label="Trainingen hero media"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>Hands-on</h3>
+            <p>Oefeningen met echte datasets en templates die je direct kunt gebruiken.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>Kleine groepen</h3>
+            <p>Persoonlijke begeleiding en ruimte voor jouw use-cases en vragen.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon"></div>
+            <h3>In-company</h3>
+            <p>Wij komen naar jullie locatie of trainen remote met jullie eigen data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aanbod -->
+    <section id="aanbod" class="services">
+      <div class="container">
+        <header class="section-head">
+          <h2>Ons trainingsaanbod</h2>
+          <p>Kies een vaste cursus of vraag om een aangepast leerpad voor je team.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Power BI Fundamentals (1 dag)</h3>
+            <p>De basis van Power BI: connecties, datamodellen, DAX, visuals en publicatie.</p>
+            <a class="card-link" href="#powerbi-fundamentals">Bekijk inhoud</a>
+          </article>
+
+          <article class="card">
+            <h3>Data Modeling & SQL (2 dagen)</h3>
+            <p>Dimensioneel modelleren, performance basics, en SQL-patterns voor BI.</p>
+            <a class="card-link" href="#datamodel-sql">Bekijk inhoud</a>
+          </article>
+
+          <article class="card">
+            <h3>Dashboard Design & Storytelling (1 dag)</h3>
+            <p>Designprincipes, UX voor dashboards en effectieve dataverhalen.</p>
+            <a class="card-link" href="#design-story">Bekijk inhoud</a>
+          </article>
+
+          <article class="card">
+            <h3>dbt & Modern Data Stack (1–2 dagen)</h3>
+            <p>dbt workflows, tests, docs en CI/CD voor betrouwbare datasets.</p>
+            <a class="card-link" href="#dbt-mds">Bekijk inhoud</a>
+          </article>
+
+          <article class="card">
+            <h3>Data Governance Essentials (1 dag)</h3>
+            <p>Datakwaliteit, definities, eigenaarschap en toegangsbeheer in de praktijk.</p>
+            <a class="card-link" href="#governance">Bekijk inhoud</a>
+          </article>
+
+          <article class="card">
+            <h3>Mentorschap & Coaching (traject)</h3>
+            <p>Structurele begeleiding on-the-job: code reviews, architectuur en best practices.</p>
+            <a class="card-link" href="#mentoring">Bekijk inhoud</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Syllabi / inhoudsblokken -->
+    <section class="benefits">
+      <div class="container">
+        <div class="benefits-grid">
+          <article id="powerbi-fundamentals" class="benefit">
+            <span class="num">1</span>
+            <h3>Power BI Fundamentals</h3>
+            <p>
+              Inhoud: verbindingen, Power Query (M), modelrelaties, basis-DAX (CALCULATE, FILTER, tijdintelligentie),
+              visuals, theming en delen via de Service/Apps.
+            </p>
+          </article>
+
+          <article id="datamodel-sql" class="benefit">
+            <span class="num">2</span>
+            <h3>Data Modeling & SQL</h3>
+            <p>
+              Inhoud: dimensioneel model (FE, DIM), normaliseren vs. denormaliseren, surrogate keys, SCD,
+              query-tuning basics, en views/materializations voor BI.
+            </p>
+          </article>
+
+          <article id="design-story" class="benefit">
+            <span class="num">3</span>
+            <h3>Dashboard Design & Storytelling</h3>
+            <p>
+              Inhoud: doelen en KPI’s, layout grids, kleurgebruik, typografie, accessibility, en narratieven
+              voor besluitvorming.
+            </p>
+          </article>
+
+          <article id="dbt-mds" class="benefit">
+            <span class="num">4</span>
+            <h3>dbt & Modern Data Stack</h3>
+            <p>
+              Inhoud: dbt modellen/tests/docs, jinja/macros, sources, exposures, deployments en CI/CD
+              met cloud warehouses.
+            </p>
+          </article>
+
+          <article id="governance" class="benefit">
+            <span class="num">5</span>
+            <h3>Data Governance Essentials</h3>
+            <p>
+              Inhoud: datadefinities & business glossary, data lineage, eigenaarschap (RACI), security en auditing.
+            </p>
+          </article>
+
+          <article id="mentoring" class="benefit">
+            <span class="num">6</span>
+            <h3>Mentorschap & Coaching</h3>
+            <p>
+              Inhoud: ritme en werkwijze, peer reviews, architectuursessies en roadmaps gericht op teamgroei.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maatwerk -->
+    <section id="maatwerk" class="about">
+      <div class="container about-inner">
+        <div class="about-copy">
+          <h2>Maatwerk & In-company</h2>
+          <p>
+            Liever trainen met jullie eigen data, kaders en tooling? We stellen samen een leerdoel en
+            ontwerpen een programma dat perfect past bij jullie team en planning.
+          </p>
+          <a class="button button--ghost" href="#contact">Plan een verkennend gesprek</a>
+        </div>
+        <div class="about-media">
+          <div class="media-placeholder" aria-label="Maatwerk media"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (details/summary, geen JS nodig) -->
+    <section class="services" aria-label="Veelgestelde vragen">
+      <div class="container">
+        <header class="section-head">
+          <h2>FAQ</h2>
+          <p>Praktische informatie over locaties, niveau en materialen.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Welk niveau hebben de trainingen?</h3>
+            <details>
+              <summary>Bekijk antwoord</summary>
+              <p>We bieden instap-, medior- en verdiepingsniveaus. In-company stemmen we het niveau af op je team.</p>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>Geven jullie ook remote?</h3>
+            <details>
+              <summary>Bekijk antwoord</summary>
+              <p>Ja, zowel on-site als remote mogelijk. Hybride is ook een optie.</p>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>Krijgen deelnemers materiaal mee?</h3>
+            <details>
+              <summary>Bekijk antwoord</summary>
+              <p>Ja, slides, oefenbestanden en samenvattingen. Optioneel inclusief opnames bij remote.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h3>Training plannen?</h3>
+        <p>Vertel ons je leerdoelen — we sturen een voorstel met inhoud, planning en prijs.</p>
+        </div>
+        <a href="mailto:info@jouwdomein.nl?subject=Training%20aanvraag" class="button button--primary">Vraag offerte aan</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (zelfde als op index) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BetterBI-like</strong>
+        <p>Verbeter je bedrijfsvoering met BI.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Voorwaarden</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Jouw Bedrijf. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
