@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IFrame Page — BetterBI-like</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Extra style just for the iframe */
+    .iframe-wrapper {
+      width: 100%;
+      height: calc(100vh - 180px); /* full viewport minus header/footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Ga naar de inhoud</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">BBI</span>
+        <span class="sr-only">BetterBI-like</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="trainingen.html">Trainingen</a></li>
+          <li><a href="index.html#over">Over</a></li>
+          <li class="nav-cta"><a href="index.html#contact" class="button button--primary">Contact</a></li>
+        </ul>
+      </nav>
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-mobile">
+        <ul>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="trainingen.html">Trainingen</a></li>
+          <li><a href="index.html#over">Over</a></li>
+          <li><a href="index.html#contact" class="button button--primary w-full">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- IFrame container -->
+    <section class="iframe-wrapper">
+      <iframe title="CV" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNGVmOGQ4NDAtNmY3Zi00ZWE5LTgzZTgtYTVkZjY1MzQ0OWQyIiwidCI6IjBiNmNjMWJhLTg5MTItNDgxZC1hNWNjLTRmY2Y3ZDU3M2M2MCIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BetterBI-like</strong>
+        <p>Verbeter je bedrijfsvoering met BI.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Voorwaarden</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Jouw Bedrijf. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
