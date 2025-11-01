@@ -207,5 +207,12 @@
     // Optional: update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+    window.addEventListener('resize', function() {
+    if (window.matchMedia('(min-width: 921px)').matches) {
+        document.getElementById('menu-toggle').checked = false;
+    }
+}, true);
+  </script>
 </body>
 </html>
