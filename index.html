@@ -214,5 +214,13 @@
     }
 }, true);
   </script>
+    <script>
+    document.querySelectorAll('.nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        const checkbox = document.getElementById('menu-toggle');
+        if (checkbox) checkbox.checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
