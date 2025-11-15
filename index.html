@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/body.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- Skip link -->
   <a class="skip-link" href="#main">Ga naar de inhoud</a>
@@ -17,8 +26,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
-        <span class="brand-mark" aria-hidden="true">BBI</span>
-        <span class="sr-only">BetterBI-like</span>
+        <!-- <span class="brand-mark" aria-hidden="true">BBI</span> -->
+        <span class="sr-only">Better BI</span>
       </a>
 
       <!-- Desktop nav -->
@@ -55,7 +64,8 @@
           <h1 class="eyebrow">Wil je</h1>
           <h2 class="display">versnellen<span class="accent">.</span></h2>
           <p class="lead">
-            Bouw een datagedreven organisatie met heldere dashboards, betrouwbare datasets en een team dat weet wat telt.
+            Bouw een datagedreven organisatie met heldere dashboards, betrouwbare datasets en een team dat weet wat
+            telt.
           </p>
           <div class="hero-actions">
             <a href="contact/" class="button button--primary">Plan een gesprek</a>
@@ -64,9 +74,10 @@
         </div>
         <div class="hero-media">
           <!-- Replace with your image/video -->
-          <div class="media-placeholder" aria-label="Hero media"></div>
+          <div class="media-placeholder" aria-label="Hero media"><img src="images/dashboard.png" alt=""></div>
         </div>
       </div>
+      
     </section>
 
     <!-- Feature highlights (3-up) -->
@@ -122,21 +133,35 @@
       </div>
     </section>
 
-    <!-- Client logos strip -->
-    <section class="clients" aria-label="Klanten">
+    <!-- Tools logos strip -->
+    <section class="clients" aria-label="Tools">
       <div class="container">
+              <header class="section-head">
+          <h2>Better BI heeft ruime ervaring met onderstaande tools</h2>
+          <p></p>
+        </header>
         <ul class="logo-strip">
-          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 1"></div></li>
-          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 2"></div></li>
-          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 3"></div></li>
-          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 4"></div></li>
-          <li class="logo-item"><div class="logo-placeholder" aria-label="Client 5"></div></li>
+          <li class="logo-item">
+            <div class="logo-placeholder" aria-label="Client 1"></div>
+          </li>
+          <li class="logo-item">
+            <div class="logo-placeholder" aria-label="Client 2"></div>
+          </li>
+          <li class="logo-item">
+            <div class="logo-placeholder" aria-label="Client 3"></div>
+          </li>
+          <li class="logo-item">
+            <div class="logo-placeholder" aria-label="Client 4"></div>
+          </li>
+          <li class="logo-item">
+            <div class="logo-placeholder" aria-label="Client 5"></div>
+          </li>
         </ul>
       </div>
     </section>
 
     <!-- Numbered benefits -->
-    <section class="benefits">
+    <!-- <section class="benefits">
       <div class="container">
         <div class="benefits-grid">
           <article class="benefit">
@@ -156,10 +181,10 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- About -->
-    <section id="over" class="about">
+    <!-- <section id="over" class="about">
       <div class="container about-inner">
         <div class="about-copy">
           <h2>Over ons</h2>
@@ -170,7 +195,7 @@
           <div class="media-placeholder" aria-label="Over ons media"></div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact / Footer CTA -->
     <section id="contact" class="cta">
@@ -188,8 +213,8 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <strong>BetterBI-like</strong>
-        <p>Verbeter je bedrijfsvoering met BI.</p>
+        <span class="logo-small">Better BI</span>
+        <p>Be better with BI</p>
       </div>
       <nav class="footer-nav">
         <ul>
@@ -198,7 +223,7 @@
         </ul>
       </nav>
       <div class="footer-meta">
-        <p>© <span id="year"></span> Jouw Bedrijf. Alle rechten voorbehouden.</p>
+        <p>© <span id="year"></span> Better BI. Alle rechten voorbehouden.</p>
       </div>
     </div>
   </footer>
@@ -208,13 +233,13 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script>
-    window.addEventListener('resize', function() {
-    if (window.matchMedia('(min-width: 921px)').matches) {
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 921px)').matches) {
         document.getElementById('menu-toggle').checked = false;
-    }
-}, true);
+      }
+    }, true);
   </script>
-    <script>
+  <script>
     document.querySelectorAll('.nav-mobile a').forEach(link => {
       link.addEventListener('click', () => {
         const checkbox = document.getElementById('menu-toggle');
@@ -223,4 +248,5 @@
     });
   </script>
 </body>
+
 </html>
